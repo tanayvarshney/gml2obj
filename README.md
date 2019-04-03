@@ -2,7 +2,7 @@
 
 A Python tool to extract individual buildings from CityGML files
 
-### Usage
+# Usage
 python main.py -i INPUT_DIR -o OUTPUT_DIR
 
 `INPUT_DIR` and `OUTPUT_DIR` are input and output directories specified by the user. This tool will find all `.gml` files in the `INPUT_DIR`, extract all buildings from these `.gml` files, and write individual building mesh as `.obj` files to the `OUTPUT_DIR`.
@@ -38,3 +38,10 @@ f 28 29 24 23
 f 8 25 9 1
 f 24 29 31 27
 ```
+
+# Contact
+Yuqiong Li
+email : yuqiongli1564 at gmail dot com
+
+# Acknowledgments
+This code is heavily influenced by Filip Biljecki's opensource "CityGML2OBJ" tool at https://github.com/tudelft3d/CityGML2OBJs.
