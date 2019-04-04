@@ -266,50 +266,53 @@ def main():
 
         #-- Do each building separately
         for b in buildings:
-            vertices_all = []
-            faces_all = {}
+            try:
+                vertices_all = []
+                faces_all = {}
 
-            semanticSurfaces = ['GroundSurface', 'WallSurface', 'RoofSurface']
-            for semanticSurface in semanticSurfaces:
-                faces_all[semanticSurface] = []
+                semanticSurfaces = ['GroundSurface', 'WallSurface', 'RoofSurface']
+                for semanticSurface in semanticSurfaces:
+                    faces_all[semanticSurface] = []
 
-            #-- Increment the building counter
-            b_counter += 1
+                #-- Increment the building counter
+                b_counter += 1
 
-            ob = b.xpath("@g:id", namespaces={'g' : ns_gml})
-            if not ob:
-                ob = b_counter
-            else:
-                ob = ob[0]
+                ob = b.xpath("@g:id", namespaces={'g' : ns_gml})
+                if not ob:
+                    ob = b_counter
+                else:
+                    ob = ob[0]
 
-            #-- Print progress for large files every 1000 buildings.
-            if b_counter == 1000:
-                print("\t1000... ", end=' ')
-            elif b_counter % 1000 == 0 and b_counter == (b_total - b_total % 1000):
-                print(str(b_counter) + "...")
-            elif b_counter > 0 and b_counter % 1000 == 0:
-                print(str(b_counter) + "... ", end=' ')
+                #-- Print progress for large files every 1000 buildings.
+                if b_counter == 1000:
+                    print("\t1000... ", end=' ')
+                elif b_counter % 1000 == 0 and b_counter == (b_total - b_total % 1000):
+                    print(str(b_counter) + "...")
+                elif b_counter > 0 and b_counter % 1000 == 0:
+                    print(str(b_counter) + "... ", end=' ')
 
-            header = "# " + ob + "\n# created on " + datetime.datetime.today().strftime('%Y-%m-%d') + "\n"
+                header = "# " + ob + "\n# created on " + datetime.datetime.today().strftime('%Y-%m-%d') + "\n"
 
 
-            for label in faces_all.keys():
-                # need to iterate over building to find surfaces
-                polys = []
-                for child in b.getiterator():
-                    if child.tag == '{%s}%s' % (ns_bldg, label):
-                        polys.append(child)
-                # write polygons to obj
-                extract_polys(polys, label, vertices_all, faces_all)
+                for label in faces_all.keys():
+                    # need to iterate over building to find surfaces
+                    polys = []
+                    for child in b.getiterator():
+                        if child.tag == '{%s}%s' % (ns_bldg, label):
+                            polys.append(child)
+                    # write polygons to obj
+                    extract_polys(polys, label, vertices_all, faces_all)
 
-            # remove duplicates from vertices_output
-            vertices_all = deduplicate_list_of_list(vertices_all)
+                # remove duplicates from vertices_output
+                vertices_all = deduplicate_list_of_list(vertices_all)
 
-            mu, v = vertices_demean(vertices_all)
-            f, s = make_faces(faces_all, vertices_all)
+                mu, v = vertices_demean(vertices_all)
+                f, s = make_faces(faces_all, vertices_all)
 
-            out_path = os.path.join(RESULT, ob + ".obj")
-            write_obj(out_path, header, mu, s, v, f)
+                out_path = os.path.join(RESULT, ob + ".obj")
+                write_obj(out_path, header, mu, s, v, f)
+            except:
+                pass
     print("\tOBJ file(s) written.")
 
 if __name__ == '__main__':
