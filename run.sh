@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # python main.py -i /media/yuqiong/DATA/city/Vienna -o /media/yuqiong/DATA/city/Vienna/res
-python main.py -i /media/yuqiong/DATA/city/hamburg/LoD2_CityGML_HH_2016 -o /media/yuqiong/DATA/city/humberg_poly_objs
+python main.py -i /media/yuqiong/DATA/city/hague/data -o /media/yuqiong/DATA/city/hague/hague_poly_objs
 
 #for d in $(find /media/yuqiong/DATA/city/berlin -maxdepth 1 -type d)
 #do
