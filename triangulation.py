@@ -289,6 +289,7 @@ def main():
         else:
             with open(error_log) as e:
                 e.write(f)
+        counter += 1
     return
 
 
