@@ -24,7 +24,6 @@ def parse_obj(path):
     - all_v : list of lists, all vertice coordinates
     - all_f: list of lists, all faces. each face consists of vertice ID
     """
-    print(path)
     with open(path) as fp:
         lines = fp.readlines()
     lines = [x for x in lines if x[0] != '#']
@@ -258,6 +257,8 @@ def main():
     error_log = os.path.join(RESULT, "error.txt")
     # f = "/media/yuqiong/DATA/city/zurich/UUID_00024863-0e11-4178-9e6b-83d00e0bd57e.obj"
     for f in files:
+        if f.split(".")[1] != "obj":
+            continue
         success = True   # a flag to check if triangulation is successful
         path = os.path.join(DIRECTORY, f)
         out_path = os.path.join(RESULT, f)
