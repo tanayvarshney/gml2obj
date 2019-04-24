@@ -7,7 +7,7 @@ import markup3dmodule
 import polygon3dmodule
 
 def main():
-    parser = ArgumentParser()
+    parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file",
                         help="the gml file path")
     parser.add_argument("-b", "--bid",

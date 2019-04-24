@@ -32,9 +32,12 @@ import math
 import markup3dmodule
 from lxml import etree
 import copy
-import triangle
 import numpy as np
 import shapely
+
+import sys
+sys.path.append("/media/yuqiong/DATA/")
+import triangle
 
 def getAreaOfGML(poly, height=True):
     """Function which reads <gml:Polygon> and returns its area.
