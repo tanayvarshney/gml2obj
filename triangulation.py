@@ -24,6 +24,7 @@ def parse_obj(path):
     - all_v : list of lists, all vertice coordinates
     - all_f: list of lists, all faces. each face consists of vertice ID
     """
+    print(path)
     with open(path) as fp:
         lines = fp.readlines()
     lines = [x for x in lines if x[0] != '#']
