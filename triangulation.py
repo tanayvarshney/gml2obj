@@ -14,6 +14,8 @@ import copy
 import math
 import triangle
 from main import face_to_idx
+from timeit import default_timer as timer
+from datetime import timedelta
 
 
 def parse_obj(path):
@@ -256,9 +258,14 @@ def main():
     files = os.listdir(DIRECTORY)
     error_log = os.path.join(RESULT, "error.txt")
     # f = "/media/yuqiong/DATA/city/zurich/UUID_00024863-0e11-4178-9e6b-83d00e0bd57e.obj"
+    counter = 0
+    start = timer()
     for f in files:
         if f.split(".")[1] != "obj":
             continue
+        if counter % 1000 == 0:
+            end = timer()
+            print("Processed: {0}-th file. Time elapsed: {1} s.".format(counter, timedelta(seconds=end-start)))
         success = True   # a flag to check if triangulation is successful
         path = os.path.join(DIRECTORY, f)
         out_path = os.path.join(RESULT, f)
