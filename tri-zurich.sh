@@ -8,8 +8,8 @@
 #  echo $src
 #  echo $dst
 #  mkdir $dst
-src="/data/city/nyc/nyc_poly_objs"
-dst="/data/city/nyc/nyc_triangle_objs_new"
+src="/data/city/zurich/zurich_new_objs"
+dst="/data/city/zurich/zurich_tri_objs"
 python triangulation.py -i $src -o $dst 
 #done
 
