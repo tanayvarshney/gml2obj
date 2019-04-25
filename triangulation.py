@@ -154,14 +154,9 @@ def my_triangulation(e):
     for p in newpolypoints:
         p.pop(-1)
 
-    print("new poly points before checking")
-    print(newpolypoints)
-
     if has_duplicate(newpolypoints):
         print("We have duplicated points!!! Check why.")
 
-    print("new poly points after checking")
-    print(newpolypoints)
     # -- Plane information (assumes planarity)
     a = e[0]
     b = e[1]
@@ -299,6 +294,7 @@ def main():
         out_path = os.path.join(RESULT, f)
 
         v_list, f_list = parse_obj(path)
+        print(v_list)
         if has_duplicate(v_list):
             print("Has duplicated points!")
         if has_duplicate(f_list):
