@@ -169,7 +169,7 @@ def my_triangulation(e):
     # -- Triangulate
     print(poly['vertices'])
     t = triangle.triangulate(poly, "p")
-    print(t)
+    # print(t)
     tris = t['triangles']
     # print(tris)
     vert = t['vertices'].tolist()
