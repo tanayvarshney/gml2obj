@@ -167,7 +167,7 @@ def my_triangulation(e):
     np.set_printoptions(threshold=sys.maxsize)
     # print(poly)
     # -- Triangulate
-    print(poly)
+    print(poly['vertices'])
     t = triangle.triangulate(poly, "p")
     print(t)
     tris = t['triangles']
