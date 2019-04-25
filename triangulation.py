@@ -262,6 +262,7 @@ def main():
     counter = 0
     start = timer()
     for f in files:
+        print(f)
         if f.split(".")[1] != "obj":
             continue
         if counter % 1000 == 0:
