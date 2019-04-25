@@ -298,7 +298,6 @@ def main():
         out_path = os.path.join(RESULT, f)
 
         v_list, f_list = parse_obj(path)
-        print(v_list)
         if has_duplicate(v_list):
             print("Has duplicated points!")
         if has_duplicate(f_list):
@@ -309,9 +308,9 @@ def main():
 
         tri_f_list = []  # triangle face lists
         for i, face in enumerate(face_with_points):
-            print(face)
+            # print(face)
             tris = my_triangulation(face)
-            print(tris)
+            # print(tris)
             if tris:  # triangulation is successful
                 tri_f_list.extend(tris)   # tri_f_list and tris both list of list of lists
             else:
