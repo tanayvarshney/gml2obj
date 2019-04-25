@@ -308,7 +308,7 @@ def main():
 
         tri_f_list = []  # triangle face lists
         for i, face in enumerate(face_with_points):
-            # print(face)
+            print(face)
             tris = my_triangulation(face)
             # print(tris)
             if tris:  # triangulation is successful
