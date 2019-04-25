@@ -309,6 +309,7 @@ def main():
             if tris:  # triangulation is successful
                 tri_f_list.extend(tris)   # tri_f_list and tris both list of list of lists
             else:
+                print("Triangulation failure!")
                 success = False
                 break
         if success:
