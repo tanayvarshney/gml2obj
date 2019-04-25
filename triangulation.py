@@ -168,6 +168,8 @@ def my_triangulation(e):
     # -- Triangulate
     t = triangle.triangulate(poly, "p")
     # -- Get the triangles and their vertices
+    if 'triangles' not in t.keys():
+        return None
     tris = t['triangles']
     # print(tris)
     vert = t['vertices'].tolist()
@@ -198,7 +200,7 @@ def my_triangulation(e):
             try:
                 match_vert = find_match(vertices, vert_adj)
             except Exception:
-                print("Calculated point not found!!")
+                # print("Calculated point not found!!")
                 return None
             tri_points_tmp.append(match_vert)
         try:
