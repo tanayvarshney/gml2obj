@@ -172,6 +172,8 @@ def my_triangulation(e):
     # -- Triangulate
     print("poly vertices")
     print(poly['vertices'])
+    print("poly segments")
+    print(poly['segments'])
     t = triangle.triangulate(poly, "p")
     # print(t)
     tris = t['triangles']
@@ -199,7 +201,8 @@ def my_triangulation(e):
                     vert_adj[0] = vert[v][0]
                     vert_adj[1] = vert[v][1]
                     vert_adj[2] = polygon3dmodule.get_height(pl, vert_adj[0], vert_adj[1])
-            except:
+            except Exception as e:
+                print(e)
                 return None
             try:
                 match_vert = find_match(vertices, vert_adj)
