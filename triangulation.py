@@ -172,8 +172,8 @@ def my_triangulation(e):
     # -- Triangulate
     print("poly vertices")
     print(poly['vertices'])
-    print("poly segments")
-    print(poly['segments'])
+    # print("poly segments")
+    # print(poly['segments'])
     t = triangle.triangulate(poly, "p")
     # print(t)
     tris = t['triangles']
@@ -205,6 +205,7 @@ def my_triangulation(e):
                 print(e)
                 return None
             try:
+                print(vert_adj)
                 match_vert = find_match(vertices, vert_adj)
             except Exception:
                 print("Calculated point not found!!")
