@@ -287,7 +287,7 @@ def main():
             new_tri_list = coor2idx(tri_f_list, v_list)
             write_obj(out_path, f, v_list, new_tri_list)
         else:
-            with open(error_log) as e:
+            with open(error_log, "w+") as e:
                 e.write(f)
         counter += 1
     return
