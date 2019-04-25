@@ -154,6 +154,9 @@ def my_triangulation(e):
     for p in newpolypoints:
         p.pop(-1)
 
+    if has_duplicate(newpolypoints):
+        print("We have duplicated points!!! Check why.")
+
     # -- Plane information (assumes planarity)
     a = e[0]
     b = e[1]
@@ -167,7 +170,7 @@ def my_triangulation(e):
     np.set_printoptions(threshold=sys.maxsize)
     # print(poly)
     # -- Triangulate
-    # print(poly['vertices'])
+    print(poly['vertices'])
     t = triangle.triangulate(poly, "p")
     # print(t)
     tris = t['triangles']
@@ -252,6 +255,22 @@ def write_obj(out_path, header, v, f):
     return
 
 
+def has_duplicate(a):
+    """
+    check if a list of list has duplicated elements
+    :param a: a list of list
+    :return: true if has duplicated elements, False if otherwise
+    """
+    # print(len(a))
+    import itertools
+    a.sort()
+    dedup = list(k for k,_ in itertools.groupby(a))
+    if len(a) != len(dedup):
+        return True
+    else:
+        return False
+
+
 def main():
     args = cmdline_args()
     DIRECTORY = args.in_dir
@@ -274,14 +293,11 @@ def main():
         out_path = os.path.join(RESULT, f)
 
         v_list, f_list = parse_obj(path)
-        print(len(v_list))
-        import itertools
-        v_list.sort()
-        dedup = list(k for k,_ in itertools.groupby(v_list))
-        print(len(dedup))
-        if len(v_list) != len(dedup):
-            print("Duplicated points!")
-        # print(v_list)
+        if has_duplicate(v_list):
+            print("Has duplicated points!")
+        if has_duplicate(f_list):
+            print("Has duplicated faces!")
+
         # a search dictionary for vertices
         face_with_points = concrete_faces(v_list, f_list)
 
