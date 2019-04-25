@@ -164,6 +164,7 @@ def my_triangulation(e):
     # -- Prepare the polygon to be triangulated
     # poly = {'vertices': np.array(newpolypoints), 'segments': np.array(segments), 'holes': np.array(newholes)}
     poly = {'vertices': np.array(newpolypoints), 'segments': np.array(segments)}
+    np.set_printoptions(threshold=sys.maxsize)
     # print(poly)
     # -- Triangulate
     print(poly)
