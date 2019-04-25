@@ -166,7 +166,9 @@ def my_triangulation(e):
     poly = {'vertices': np.array(newpolypoints), 'segments': np.array(segments)}
     # print(poly)
     # -- Triangulate
+    print(poly)
     t = triangle.triangulate(poly, "p")
+    print(t)
     tris = t['triangles']
     # print(tris)
     vert = t['vertices'].tolist()

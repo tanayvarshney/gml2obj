@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bea55582-3e0b-44b3-8635-864bf7cc9dd1" name="Default Changelist" comment="" />
+    <list default="true" id="bea55582-3e0b-44b3-8635-864bf7cc9dd1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/triangulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/triangulation.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/triangulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="170" column="22" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+            <state relative-caret-position="424">
+              <caret line="170" column="10" selection-start-line="170" selection-start-column="10" selection-end-line="170" selection-end-column="10" />
               <folding>
                 <element signature="e#96#118#0" expanded="true" />
               </folding>
@@ -23,22 +25,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5738">
-              <caret line="311" selection-start-line="311" selection-end-line="311" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/polygon3dmodule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6232">
-              <caret line="335" column="22" selection-start-line="335" selection-start-column="22" selection-end-line="335" selection-end-column="22" />
+            <state relative-caret-position="214">
+              <caret line="332" column="9" lean-forward="true" selection-start-line="332" selection-start-column="9" selection-end-line="332" selection-end-column="9" />
               <folding>
                 <element signature="e#1266#1277#0" expanded="true" />
               </folding>
@@ -151,19 +141,19 @@
       <workItem from="1556034842068" duration="3000" />
       <workItem from="1556034857700" duration="5010000" />
       <workItem from="1556130969680" duration="9803000" />
-      <workItem from="1556202692895" duration="1209000" />
+      <workItem from="1556202692895" duration="1604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39179000" />
+    <option name="totallyTimeSpent" value="39574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48588958" visible="true" weight="0.2097399" />
-      <window_info id="Structure" order="1" sideWeight="0.51411045" side_tool="true" visible="true" weight="0.2097399" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.51411045" side_tool="true" visible="true" weight="0.2097399" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -177,7 +167,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.16751787" />
+      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.16751787" />
       <window_info anchor="right" x="0" y="0" width="413" height="884" id="Documentation" order="0" side_tool="true" visible="true" weight="0.1793027" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -189,16 +179,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/markup3dmodule.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/triangulation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="170" column="22" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
-          <folding>
-            <element signature="e#96#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -212,10 +192,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/polygon3dmodule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6232">
-          <caret line="335" column="22" selection-start-line="335" selection-start-column="22" selection-end-line="335" selection-end-column="22" />
+        <state relative-caret-position="214">
+          <caret line="332" column="9" lean-forward="true" selection-start-line="332" selection-start-column="9" selection-end-line="332" selection-end-column="9" />
           <folding>
             <element signature="e#1266#1277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/triangulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="170" column="10" selection-start-line="170" selection-start-column="10" selection-end-line="170" selection-end-column="10" />
+          <folding>
+            <element signature="e#96#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
