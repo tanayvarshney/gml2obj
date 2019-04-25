@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/triangulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1324">
-              <caret line="171" column="13" selection-start-line="171" selection-start-column="13" selection-end-line="171" selection-end-column="13" />
+            <state relative-caret-position="405">
+              <caret line="274" column="39" selection-start-line="274" selection-start-column="39" selection-end-line="274" selection-end-column="39" />
               <folding>
                 <element signature="e#96#118#0" expanded="true" />
               </folding>
@@ -139,12 +139,12 @@
       <workItem from="1556034842068" duration="3000" />
       <workItem from="1556034857700" duration="5010000" />
       <workItem from="1556130969680" duration="9803000" />
-      <workItem from="1556202692895" duration="3575000" />
+      <workItem from="1556202692895" duration="4928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41545000" />
+    <option name="totallyTimeSpent" value="42898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -200,8 +200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/triangulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1324">
-          <caret line="171" column="13" selection-start-line="171" selection-start-column="13" selection-end-line="171" selection-end-column="13" />
+        <state relative-caret-position="405">
+          <caret line="274" column="39" selection-start-line="274" selection-start-column="39" selection-end-line="274" selection-end-column="39" />
           <folding>
             <element signature="e#96#118#0" expanded="true" />
           </folding>

@@ -167,7 +167,7 @@ def my_triangulation(e):
     np.set_printoptions(threshold=sys.maxsize)
     # print(poly)
     # -- Triangulate
-    print(poly['vertices'])
+    # print(poly['vertices'])
     t = triangle.triangulate(poly, "p")
     # print(t)
     tris = t['triangles']
@@ -256,7 +256,8 @@ def main():
     args = cmdline_args()
     DIRECTORY = args.in_dir
     RESULT = args.out_dir
-    files = os.listdir(DIRECTORY)
+    # files = os.listdir(DIRECTORY)
+    files = "UUID_b8d12301-d2f0-4f02-acb8-d32b344380c1.obj"
     error_log = os.path.join(RESULT, "error.txt")
     # f = "/media/yuqiong/DATA/city/zurich/UUID_00024863-0e11-4178-9e6b-83d00e0bd57e.obj"
     counter = 0
@@ -273,7 +274,7 @@ def main():
         out_path = os.path.join(RESULT, f)
 
         v_list, f_list = parse_obj(path)
-
+        print(v_list)
         # a search dictionary for vertices
         face_with_points = concrete_faces(v_list, f_list)
 
