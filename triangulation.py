@@ -274,7 +274,14 @@ def main():
         out_path = os.path.join(RESULT, f)
 
         v_list, f_list = parse_obj(path)
-        print(v_list)
+        print(len(v_list))
+        if len(v_list) != len(set(v_list)):
+            print("Duplicated points!")
+        import itertools
+        v_list.sort()
+        dedup = list(k for k,_ in itertools.groupby(v_list))
+        print(len(dedup))
+        # print(v_list)
         # a search dictionary for vertices
         face_with_points = concrete_faces(v_list, f_list)
 
