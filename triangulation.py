@@ -207,7 +207,7 @@ def my_triangulation(e):
             try:
                 match_vert = find_match(vertices, vert_adj)
             except Exception:
-                # print("Calculated point not found!!")
+                print("Calculated point not found!!")
                 return None
             tri_points_tmp.append(match_vert)
         try:
@@ -286,7 +286,7 @@ def main():
     counter = 0
     start = timer()
     for f in files:
-        print(f)
+        # print(f)
         if f.split(".")[1] != "obj":
             continue
         if counter % 1000 == 0:
