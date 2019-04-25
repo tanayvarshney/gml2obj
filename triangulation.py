@@ -257,7 +257,7 @@ def main():
     DIRECTORY = args.in_dir
     RESULT = args.out_dir
     # files = os.listdir(DIRECTORY)
-    files = "UUID_b8d12301-d2f0-4f02-acb8-d32b344380c1.obj"
+    files = ["UUID_b8d12301-d2f0-4f02-acb8-d32b344380c1.obj"]
     error_log = os.path.join(RESULT, "error.txt")
     # f = "/media/yuqiong/DATA/city/zurich/UUID_00024863-0e11-4178-9e6b-83d00e0bd57e.obj"
     counter = 0
