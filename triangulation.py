@@ -179,23 +179,22 @@ def my_triangulation(e):
         # print(tri)
         tri_points_tmp = []   # a single triangle. list of lists
         for v in tri.tolist():
-            # print("now print v")
-            # print(v)
-            vert_adj = [0] * 3   # initialize a vertex!
-            if YZ:
-                vert_adj[0] = temppolypoints[0][0]
-                vert_adj[1] = vert[v][0]
-                vert_adj[2] = vert[v][1]
-            elif vertical:
-                vert_adj[0] = vert[v][0]
-                vert_adj[2] = vert[v][1]
-                vert_adj[1] = polygon3dmodule.get_y(pl, vert_adj[0], vert_adj[2])
-            else:
-                vert_adj[0] = vert[v][0]
-                vert_adj[1] = vert[v][1]
-                vert_adj[2] = polygon3dmodule.get_height(pl, vert_adj[0], vert_adj[1])
-            # print("vert adj sample!!")
-            # print(vert_adj)
+            try:
+                vert_adj = [0] * 3   # initialize a vertex!
+                if YZ:
+                    vert_adj[0] = temppolypoints[0][0]
+                    vert_adj[1] = vert[v][0]
+                    vert_adj[2] = vert[v][1]
+                elif vertical:
+                    vert_adj[0] = vert[v][0]
+                    vert_adj[2] = vert[v][1]
+                    vert_adj[1] = polygon3dmodule.get_y(pl, vert_adj[0], vert_adj[2])
+                else:
+                    vert_adj[0] = vert[v][0]
+                    vert_adj[1] = vert[v][1]
+                    vert_adj[2] = polygon3dmodule.get_height(pl, vert_adj[0], vert_adj[1])
+            except:
+                return None
             try:
                 match_vert = find_match(vertices, vert_adj)
             except Exception:
