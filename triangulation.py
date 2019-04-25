@@ -167,9 +167,6 @@ def my_triangulation(e):
     # print(poly)
     # -- Triangulate
     t = triangle.triangulate(poly, "p")
-    # -- Get the triangles and their vertices
-    if 'triangles' not in t.keys():
-        return None
     tris = t['triangles']
     # print(tris)
     vert = t['vertices'].tolist()
