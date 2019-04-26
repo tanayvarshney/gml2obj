@@ -284,8 +284,10 @@ def main():
     args = cmdline_args()
     DIRECTORY = args.in_dir
     RESULT = args.out_dir
-    files = os.listdir(DIRECTORY)
+    # files = os.listdir(DIRECTORY)
     # files = ["UUID_b8d12301-d2f0-4f02-acb8-d32b344380c1.obj"]
+    files = ["UUID_01679064-4b86-44c9-85c3-3fb4701dbeb0.obj"]
+
     error_log = os.path.join(RESULT, "error.txt")
     # f = "/media/yuqiong/DATA/city/zurich/UUID_00024863-0e11-4178-9e6b-83d00e0bd57e.obj"
     counter = 0
@@ -312,7 +314,7 @@ def main():
 
         tri_f_list = []  # triangle face lists
         for i, face in enumerate(face_with_points):
-            print(face)
+            # print(face)
             tris = my_triangulation(face)
             # print(tris)
             if tris:  # triangulation is successful
