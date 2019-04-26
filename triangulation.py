@@ -265,20 +265,12 @@ def write_obj(out_path, header, v, f):
     return
 
 
-def has_duplicate(a):
-    """
-    check if a list of list has duplicated elements
-    :param a: a list of list
-    :return: true if has duplicated elements, False if otherwise
-    """
-    # print(len(a))
-    import itertools
-    a.sort()
-    dedup = list(k for k,_ in itertools.groupby(a))
-    if len(a) != len(dedup):
-        return True
-    else:
-        return False
+def unique_items(L):
+    found = []
+    for item in L:
+        if item not in found:
+            found.append(item)
+    return found
 
 
 def main():
@@ -286,11 +278,9 @@ def main():
     DIRECTORY = args.in_dir
     RESULT = args.out_dir
     files = os.listdir(DIRECTORY)
-    # files = ["UUID_b8d12301-d2f0-4f02-acb8-d32b344380c1.obj"]
-    # files = ["UUID_01679064-4b86-44c9-85c3-3fb4701dbeb0.obj"]
-    # files = ["gml_U2VLBZW4J9D0HX2928ZQNTL7B3UG372N5QUM.obj"]
 
     error_log = os.path.join(RESULT, "error.txt")
+    duplicates_log = os.path.join(RESULT, "dup.txt")   # obj files with duplicated faces
     # f = "/media/yuqiong/DATA/city/zurich/UUID_00024863-0e11-4178-9e6b-83d00e0bd57e.obj"
     counter = 0
     start = timer()
@@ -306,13 +296,20 @@ def main():
         out_path = os.path.join(RESULT, f)
 
         v_list, f_list = parse_obj(path)
-        if has_duplicate(copy.copy(v_list)):
-            print("Has duplicated points!")
-        if has_duplicate(copy.copy(f_list)):
-            print("Has duplicated faces!")
+        unique_v = unique_items(v_list)
+        unique_f = unique_items(f_list)
+
+        if len(v_list) != len(unique_v) or len(f_list) != len(unique_f):
+            if len(v_list) != len(unique_v):
+                print("Has duplicated vertices!")
+            else:
+                print("Has duplicated faces!")
+            with open(duplicates_log, "w+") as d:
+                d.write(f)
+
 
         # a search dictionary for vertices
-        face_with_points = concrete_faces(v_list, f_list)
+        face_with_points = concrete_faces(unique_v, unique_f)
 
         tri_f_list = []  # triangle face lists
         for i, face in enumerate(face_with_points):
@@ -326,8 +323,8 @@ def main():
                 success = False
                 break
         if success:
-            new_tri_list = coor2idx(tri_f_list, v_list)
-            write_obj(out_path, f, v_list, new_tri_list)
+            new_tri_list = coor2idx(tri_f_list, unique_v)
+            write_obj(out_path, f, unique_v, new_tri_list)
         else:
             with open(error_log, "w+") as e:
                 e.write(f)
