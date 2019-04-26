@@ -130,7 +130,7 @@ def my_triangulation(e):
     except Exception as e:
         print(e)
         return None
-    
+
     if math.fabs(normal[2]) < 10e-2:
         vertical = True
     else:
@@ -182,10 +182,16 @@ def my_triangulation(e):
     t = triangle.triangulate(poly, "p")
     # print("t")
     # print(t)
-    tris = t['triangles']
+    try:
+        tris = t['triangles']
+    except:
+        return None
     # print("tris")
     # print(tris)
-    vert = t['vertices'].tolist()
+    try:
+        vert = t['vertices'].tolist()
+    except:
+        return None
     # print("vert")
     # print(vert)
     # print(tris)
