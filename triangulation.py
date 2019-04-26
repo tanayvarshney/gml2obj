@@ -154,8 +154,8 @@ def my_triangulation(e):
     for p in newpolypoints:
         p.pop(-1)
 
-    if has_duplicate(copy.copy(newpolypoints)):
-        # print("We have duplicated points!!! Check why.")
+    if len(newpolypoints) != unique_items(newpolypoints):
+        print("We have duplicated points!!! Check why.")
         return None
     # -- Plane information (assumes planarity)
     a = e[0]
