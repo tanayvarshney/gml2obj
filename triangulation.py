@@ -209,6 +209,7 @@ def my_triangulation(e):
                 # print(e)
                 return None
             try:
+                print("now print vert adj")
                 print(vert_adj)
                 match_vert = find_match(vertices, vert_adj)
             except Exception:
@@ -218,7 +219,7 @@ def my_triangulation(e):
         try:
             tri_normal = polygon3dmodule.unit_normal(tri_points_tmp[0], tri_points_tmp[1], tri_points_tmp[2])
         except:
-            print("Triangle normal incorrect!!")
+            print("Triangle normal incorrect!!\n")
             return None
         if polygon3dmodule.compare_normals(normal, tri_normal):
             tri_points.append(tri_points_tmp)
