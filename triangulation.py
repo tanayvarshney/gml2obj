@@ -170,10 +170,10 @@ def my_triangulation(e):
     np.set_printoptions(threshold=sys.maxsize)
     # print(poly)
     # -- Triangulate
-    # print("poly vertices")
-    # print(poly['vertices'])
-    # print("poly segments")
-    # print(poly['segments'])
+    print("poly vertices")
+    print(poly['vertices'])
+    print("poly segments")
+    print(poly['segments'])
     t = triangle.triangulate(poly, "p")
     # print("t")
     # print(t)
@@ -187,8 +187,8 @@ def my_triangulation(e):
     # -- Store the vertices of each triangle in a list
     tri_points = []  # store all the traingles. a list of list of list
     for tri in tris:
-        # print("now print tri")
-        # print(tri)
+        print("now print tri")
+        print(tri)
         tri_points_tmp = []   # a single triangle. list of lists
         for v in tri.tolist():
             try:
@@ -209,7 +209,7 @@ def my_triangulation(e):
                 # print(e)
                 return None
             try:
-                # print(vert_adj)
+                print(vert_adj)
                 match_vert = find_match(vertices, vert_adj)
             except Exception:
                 print("Calculated point not found!!")
