@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bea55582-3e0b-44b3-8635-864bf7cc9dd1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/triangulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/triangulation.py" afterDir="false" />
-    </list>
+    <list default="true" id="bea55582-3e0b-44b3-8635-864bf7cc9dd1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/triangulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="322" column="50" selection-start-line="322" selection-start-column="50" selection-end-line="322" selection-end-column="50" />
+            <state relative-caret-position="418">
+              <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
               <folding>
                 <element signature="e#96#118#0" expanded="true" />
               </folding>
@@ -141,12 +139,12 @@
       <workItem from="1556034842068" duration="3000" />
       <workItem from="1556034857700" duration="5010000" />
       <workItem from="1556130969680" duration="9803000" />
-      <workItem from="1556202692895" duration="13543000" />
+      <workItem from="1556202692895" duration="15334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51513000" />
+    <option name="totallyTimeSpent" value="53304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -202,8 +200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/triangulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="322" column="50" selection-start-line="322" selection-start-column="50" selection-end-line="322" selection-end-column="50" />
+        <state relative-caret-position="418">
+          <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
           <folding>
             <element signature="e#96#118#0" expanded="true" />
           </folding>
