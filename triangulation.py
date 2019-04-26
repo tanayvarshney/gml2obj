@@ -125,7 +125,12 @@ def my_triangulation(e):
     # -- Compute the normal of the polygon for detecting vertical polygons and
     # -- for the correct orientation of the new triangulated faces
     # -- If the polygon is vertical, i.e. parallel to the z axis
-    normal = polygon3dmodule.unit_normal(temppolypoints[0], temppolypoints[1], temppolypoints[2])
+    try:
+       normal = polygon3dmodule.unit_normal(temppolypoints[0], temppolypoints[1], temppolypoints[2])
+    except Exception as e:
+        print(e)
+        return None
+    
     if math.fabs(normal[2]) < 10e-2:
         vertical = True
     else:
