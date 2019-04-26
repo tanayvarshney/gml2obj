@@ -170,23 +170,20 @@ def my_triangulation(e):
     np.set_printoptions(threshold=sys.maxsize)
     # print(poly)
     # -- Triangulate
-    print("poly vertices")
-    print(poly['vertices'])
-    print("poly segments")
-    print(poly['segments'])
+    # print("poly vertices")
+    # print(poly['vertices'])
+    # print("poly segments")
+    # print(poly['segments'])
     t = triangle.triangulate(poly, "p")
-    print("t")
-    print(t)
+    # print("t")
     # print(t)
     tris = t['triangles']
-    print("tris")
-    print(tris)
+    # print("tris")
     # print(tris)
     vert = t['vertices'].tolist()
-    print("vert")
-    print(vert)
-    # print(tris)
+    # print("vert")
     # print(vert)
+    # print(tris)
     # -- Store the vertices of each triangle in a list
     tri_points = []  # store all the traingles. a list of list of list
     for tri in tris:
@@ -209,10 +206,10 @@ def my_triangulation(e):
                     vert_adj[1] = vert[v][1]
                     vert_adj[2] = polygon3dmodule.get_height(pl, vert_adj[0], vert_adj[1])
             except Exception as e:
-                print(e)
+                # print(e)
                 return None
             try:
-                print(vert_adj)
+                # print(vert_adj)
                 match_vert = find_match(vertices, vert_adj)
             except Exception:
                 print("Calculated point not found!!")
@@ -287,8 +284,8 @@ def main():
     args = cmdline_args()
     DIRECTORY = args.in_dir
     RESULT = args.out_dir
-    # files = os.listdir(DIRECTORY)
-    files = ["UUID_b8d12301-d2f0-4f02-acb8-d32b344380c1.obj"]
+    files = os.listdir(DIRECTORY)
+    # files = ["UUID_b8d12301-d2f0-4f02-acb8-d32b344380c1.obj"]
     error_log = os.path.join(RESULT, "error.txt")
     # f = "/media/yuqiong/DATA/city/zurich/UUID_00024863-0e11-4178-9e6b-83d00e0bd57e.obj"
     counter = 0
