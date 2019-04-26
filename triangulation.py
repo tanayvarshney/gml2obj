@@ -172,8 +172,8 @@ def my_triangulation(e):
     # -- Triangulate
     print("poly vertices")
     print(poly['vertices'])
-    # print("poly segments")
-    # print(poly['segments'])
+    print("poly segments")
+    print(poly['segments'])
     t = triangle.triangulate(poly, "p")
     print("t")
     print(t)
