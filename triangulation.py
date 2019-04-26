@@ -305,9 +305,9 @@ def main():
         out_path = os.path.join(RESULT, f)
 
         v_list, f_list = parse_obj(path)
-        if has_duplicate(v_list):
+        if has_duplicate(copy.copy(v_list)):
             print("Has duplicated points!")
-        if has_duplicate(f_list):
+        if has_duplicate(copy.copy(f_list)):
             print("Has duplicated faces!")
 
         # a search dictionary for vertices
