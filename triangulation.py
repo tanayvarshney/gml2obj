@@ -156,7 +156,7 @@ def my_triangulation(e):
 
     if has_duplicate(newpolypoints):
         # print("We have duplicated points!!! Check why.")
-        return None 
+        return None
     # -- Plane information (assumes planarity)
     a = e[0]
     b = e[1]
@@ -284,9 +284,9 @@ def main():
     args = cmdline_args()
     DIRECTORY = args.in_dir
     RESULT = args.out_dir
-    # files = os.listdir(DIRECTORY)
+    files = os.listdir(DIRECTORY)
     # files = ["UUID_b8d12301-d2f0-4f02-acb8-d32b344380c1.obj"]
-    files = ["UUID_01679064-4b86-44c9-85c3-3fb4701dbeb0.obj"]
+    # files = ["UUID_01679064-4b86-44c9-85c3-3fb4701dbeb0.obj"]
 
     error_log = os.path.join(RESULT, "error.txt")
     # f = "/media/yuqiong/DATA/city/zurich/UUID_00024863-0e11-4178-9e6b-83d00e0bd57e.obj"
@@ -320,7 +320,7 @@ def main():
             if tris:  # triangulation is successful
                 tri_f_list.extend(tris)   # tri_f_list and tris both list of list of lists
             else:
-                print("Triangulation failure!")
+                print("Triangulation failure! " + f)
                 success = False
                 break
         if success:
