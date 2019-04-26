@@ -154,7 +154,7 @@ def my_triangulation(e):
     for p in newpolypoints:
         p.pop(-1)
 
-    if has_duplicate(newpolypoints):
+    if has_duplicate(copy.copy(newpolypoints)):
         # print("We have duplicated points!!! Check why.")
         return None
     # -- Plane information (assumes planarity)
@@ -170,10 +170,10 @@ def my_triangulation(e):
     np.set_printoptions(threshold=sys.maxsize)
     # print(poly)
     # -- Triangulate
-    print("poly vertices")
-    print(poly['vertices'])
-    print("poly segments")
-    print(poly['segments'])
+    # print("poly vertices")
+    # print(poly['vertices'])
+    # print("poly segments")
+    # print(poly['segments'])
     t = triangle.triangulate(poly, "p")
     # print("t")
     # print(t)
@@ -187,8 +187,8 @@ def my_triangulation(e):
     # -- Store the vertices of each triangle in a list
     tri_points = []  # store all the traingles. a list of list of list
     for tri in tris:
-        print("now print tri")
-        print(tri)
+        # print("now print tri")
+        # print(tri)
         tri_points_tmp = []   # a single triangle. list of lists
         for v in tri.tolist():
             try:
@@ -206,11 +206,11 @@ def my_triangulation(e):
                     vert_adj[1] = vert[v][1]
                     vert_adj[2] = polygon3dmodule.get_height(pl, vert_adj[0], vert_adj[1])
             except Exception as e:
-                # print(e)
+                print(e)
                 return None
             try:
-                print("now print vert adj")
-                print(vert_adj)
+                # print("now print vert adj")
+                # print(vert_adj)
                 match_vert = find_match(vertices, vert_adj)
             except Exception:
                 print("Calculated point not found!!")
@@ -295,7 +295,7 @@ def main():
     counter = 0
     start = timer()
     for f in files:
-        print(f)
+        # print(f)
         if f.split(".")[1] != "obj":
             continue
         if counter % 1000 == 0:
