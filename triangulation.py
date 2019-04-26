@@ -175,10 +175,17 @@ def my_triangulation(e):
     # print("poly segments")
     # print(poly['segments'])
     t = triangle.triangulate(poly, "p")
+    print("t")
+    print(t)
     # print(t)
     tris = t['triangles']
+    print("tris")
+    print(tris)
     # print(tris)
     vert = t['vertices'].tolist()
+    print("vert")
+    print(vert)
+    # print(tris)
     # print(vert)
     # -- Store the vertices of each triangle in a list
     tri_points = []  # store all the traingles. a list of list of list
