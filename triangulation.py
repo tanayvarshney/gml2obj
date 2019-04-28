@@ -396,8 +396,13 @@ def main():
             # print("segments")
             # print(segments)
             t = my_triangulation(face2d, segments)
-            tris = t['triangles']
-            vert2d = t['vertices'].tolist()
+            try:
+                tris = t['triangles']
+                vert2d = t['vertices'].tolist()
+            except Exception as e:
+                print(e)
+                success = False
+                break
 
             # transform back to 3D
             vert3d = []
