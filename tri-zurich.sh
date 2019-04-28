@@ -8,8 +8,14 @@
 #  echo $src
 #  echo $dst
 #  mkdir $dst
-src="/data/city/zurich/zurich_new_objs"
-dst="/data/city/zurich/zurich_tri_objs"
-python triangulation.py -i $src -o $dst 
+# src="/data/city/zurich/zurich_new_objs"
+# dst="/data/city/zurich/zurich_tri_objs"
+#src="/media/yuqiong/DATA/city/zurich/zurich_new_objs"
+#dst="/media/yuqiong/DATA/city/zurich/zurich_new_objs_tri"
+
+src="/media/yuqiong/DATA/city/zurich/test"
+dst="/media/yuqiong/DATA/city/zurich/"
+
+python triangulation.py -i $src -o $dst
 #done
 
