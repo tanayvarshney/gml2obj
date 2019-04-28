@@ -9,7 +9,7 @@
 #  echo $dst
 #  mkdir $dst
 src="/data/city/nyc/nyc_poly_objs"
-dst="/data/city/nyc/nyc_triangle_objs_new"
+dst="/data/city/nyc/nyc_tri_objs"
 #src="/media/yuqiong/DATA/tools"
 #dst="/media/yuqiong/DATA/tools"
 python triangulation.py -i $src -o $dst 
