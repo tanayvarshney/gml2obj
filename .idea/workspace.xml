@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bea55582-3e0b-44b3-8635-864bf7cc9dd1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/triangulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/triangulation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/triangulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="420" column="17" selection-start-line="420" selection-start-column="17" selection-end-line="420" selection-end-column="17" />
+            <state relative-caret-position="308">
+              <caret line="289" column="8" selection-start-line="289" selection-end-line="298" selection-end-column="10" />
               <folding>
                 <element signature="e#96#118#0" expanded="true" />
                 <marker date="1556420000299" expanded="true" signature="12842:13034" ph="..." />
@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/polygon3dmodule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="1824">
+              <caret line="103" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="e#1266#1277#0" expanded="true" />
               </folding>
@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="293" column="37" selection-start-line="293" selection-start-column="37" selection-end-line="293" selection-end-column="37" />
+            <state relative-caret-position="3705">
+              <caret line="204" selection-start-line="204" selection-end-line="204" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -83,6 +83,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -94,13 +95,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -159,12 +159,15 @@
       <workItem from="1556202692895" duration="15883000" />
       <workItem from="1556292636349" duration="4704000" />
       <workItem from="1556371871326" duration="7318000" />
-      <workItem from="1556391198031" duration="9941000" />
+      <workItem from="1556391198031" duration="10580000" />
+      <workItem from="1556472000767" duration="216000" />
+      <workItem from="1556561248411" duration="1501000" />
+      <workItem from="1556643245045" duration="651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89405000" />
+    <option name="totallyTimeSpent" value="92412000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -176,11 +179,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48314607" visible="true" weight="0.21804096" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5168539" side_tool="true" visible="true" weight="0.21804096" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4805468" visible="true" weight="0.22634201" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5194532" side_tool="true" visible="true" weight="0.22634201" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -207,13 +210,7 @@
     <entry file="file://$PROJECT_DIR$/markup3dmodule.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/triangulation.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/triangulation.sh" />
     <entry file="file://$PROJECT_DIR$/snippets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="868">
@@ -228,10 +225,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/triangulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="289" column="8" selection-start-line="289" selection-end-line="298" selection-end-column="10" />
+          <folding>
+            <element signature="e#96#118#0" expanded="true" />
+            <marker date="1556420000299" expanded="true" signature="12842:13034" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/polygon3dmodule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="1824">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="e#1266#1277#0" expanded="true" />
           </folding>
@@ -240,21 +248,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="293" column="37" selection-start-line="293" selection-start-column="37" selection-end-line="293" selection-end-column="37" />
+        <state relative-caret-position="3705">
+          <caret line="204" selection-start-line="204" selection-end-line="204" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/triangulation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="420" column="17" selection-start-line="420" selection-start-column="17" selection-end-line="420" selection-end-column="17" />
-          <folding>
-            <element signature="e#96#118#0" expanded="true" />
-            <marker date="1556420000299" expanded="true" signature="12842:13034" ph="..." />
           </folding>
         </state>
       </provider>
