@@ -14,8 +14,10 @@ def getText(b, path):
     """
     return b.findall(path)[0].text
 
-DIRECTORY = "/media/yuqiong/DATA/city/nyc/test"  # input dir
-RESULT =  "/media/yuqiong/DATA/city/nyc"  # input dir
+# DIRECTORY = "/media/yuqiong/DATA/city/nyc/test"  # input dir
+DIRECTORY = "/data/city/nyc/extra/gmls/nyc_tiles"
+RESULT = "/data/city/nyc/extra/gmls"
+# RESULT =  "/media/yuqiong/DATA/city/nyc"  # input dir
 # args = cmdline_args()
 # DIRECTORY = args.in_dir
 # RESULT = args.out_dir
@@ -177,5 +179,5 @@ for f in files_found:
 
     df = pd.DataFrame(b_info_total)
 
-    with open("test.csv", 'a') as f:
+    with open("result.csv", 'a') as f:
         df.to_csv(f, header=True)
